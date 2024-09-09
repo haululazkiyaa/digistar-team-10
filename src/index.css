@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.primary-button-white {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 146 172 / var(--tw-border-opacity));
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(0 146 172 / var(--tw-text-opacity));
+}
+
+.primary-button-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 146 172 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.primary-button-blue {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 146 172 / var(--tw-bg-opacity));
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.primary-button-blue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 179 197 / var(--tw-bg-opacity));
+}
+
+.container-layout {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.25rem;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: Ubuntu, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.text-paletteText-primary {
+  --tw-text-opacity: 1;
+  color: rgb(68 75 85 / var(--tw-text-opacity));
+}
+
+.text-paletteText-inactive {
+  --tw-text-opacity: 1;
+  color: rgb(128 140 146 / var(--tw-text-opacity));
+}
+
+.hover\:text-secondary-70:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 146 172 / var(--tw-text-opacity));
+}
+
+.bg-borderCard-card {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 249 252 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1280px) {
+  .container-layout {
+    width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
