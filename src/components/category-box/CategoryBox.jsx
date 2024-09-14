@@ -124,7 +124,7 @@ const CategoryBox = () => {
                   : "bg-[#F1F3F7] cursor-pointer"
               } p-4 rounded-t-2xl w-fit border-[#e6e6e6] border-[1px] border-b-0 hover:bg-white z-20`}
               style={{
-                boxShadow: "rgba(0, 0, 0, 0.2) -2px -2px 7px -4px;",
+                boxShadow: "rgba(0, 0, 0, 0.2) -2px -2px 7px -4px",
               }}
               onClick={() => handleSelectedMenu("Tender Kilat")}
             >
@@ -182,7 +182,7 @@ const CategoryBox = () => {
                 ? "bg-white cursor-default"
                 : "bg-[#F1F3F7] cursor-pointer"
             } py-4 px-[17px] rounded-t-2xl w-[139px] border-[#e6e6e6] border-[1px] border-b-0 hover:bg-white z-20`}
-            style={{ boxShadow: "rgba(0, 0, 0, 0.2) -2px -2px 7px -4px;" }}
+            style={{ boxShadow: "rgba(0, 0, 0, 0.2) -2px -2px 7px -4px" }}
             onClick={() => handleSelectedMenu("Kategori")}
           >
             <div className="relative w-[15px] h-[15px]">

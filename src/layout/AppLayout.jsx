@@ -1,19 +1,15 @@
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import PropTypes from "prop-types";
+import { Outlet } from "react-router-dom";
 
-const AppLayout = ({ children }) => {
+const AppLayout = () => {
   return (
     <main className="ubuntu">
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </main>
   );
-};
-
-AppLayout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default AppLayout;
