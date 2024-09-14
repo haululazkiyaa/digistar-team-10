@@ -71,6 +71,11 @@
   background-color: rgb(246 249 252 / var(--tw-bg-opacity));
 }
 
+.text-secondary-70 {
+  --tw-text-opacity: 1;
+  color: rgb(0 146 172 / var(--tw-text-opacity));
+}
+
 @media (min-width: 1280px) {
   .container-layout {
     width: 1200px;

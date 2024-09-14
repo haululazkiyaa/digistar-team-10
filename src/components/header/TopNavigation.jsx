@@ -1,6 +1,6 @@
 const TopNavigation = () => {
   return (
-    <div className="sticky top-0 z-40">
+    <div className="bg-[#f1f3f7]">
       <nav className="justify-between bg-inactive z-40 h-9 hidden md:flex">
         <div className="flex px-[22px] z-40 bg-inactive w-full">
           <div className="flex items-center text-xs font-normal text-[#8D8D97] hover:text-secondary-70 hover:font-bold pr-8 cursor-pointer">
