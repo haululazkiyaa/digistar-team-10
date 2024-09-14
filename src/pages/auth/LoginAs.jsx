@@ -93,36 +93,6 @@ const LoginAs = () => {
           </div>
         </a>
       </div>
-      <div className="hidden md:block lg:block  xl:block absolute left-0 top-5">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="73"
-          height="315"
-          src="/svgs/oranament-left.svg"
-          style={{ color: "transparent" }}
-        />
-      </div>
-      <div className="absolute right-0 top-10">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="90"
-          height="154"
-          src="/svgs/oranament-right.svg"
-          style={{ color: "transparent" }}
-        />
-      </div>
-      <div className="absolute bottom-0 left-0">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="148"
-          height="144"
-          src="/svgs/oranament-bottom.svg"
-          style={{ color: "transparent" }}
-        />
-      </div>
     </div>
   );
 };

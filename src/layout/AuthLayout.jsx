@@ -51,6 +51,33 @@ const AuthLayout = () => {
           <Outlet />
         </div>
       </div>
+      <div className="hidden md:block lg:block  xl:block absolute left-0 top-5">
+        <img
+          alt="ornament"
+          src="/svgs/oranament-left.svg"
+          width="73"
+          height="315"
+          style={{ color: "transparent" }}
+        />
+      </div>
+      <div className="absolute right-0 top-10">
+        <img
+          alt="ornament"
+          src="/svgs/oranament-right.svg"
+          width="90"
+          height="154"
+          style={{ color: "transparent" }}
+        />
+      </div>
+      <div className="absolute bottom-0 left-0">
+        <img
+          alt="ornament"
+          src="/svgs/oranament-bottom.svg"
+          width="148"
+          height="144"
+          style={{ color: "transparent" }}
+        />
+      </div>
     </div>
   );
 };

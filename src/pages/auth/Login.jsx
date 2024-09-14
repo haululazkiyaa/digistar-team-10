@@ -115,39 +115,6 @@ const Login = () => {
           </a>
         </p>
       </div>
-      <div className="hidden md:block lg:block  xl:block absolute left-0 top-5">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="73"
-          height="315"
-          decoding="async"
-          data-nimg="1"
-          style={{ color: "transparent" }}
-        />
-      </div>
-      <div className="absolute right-0 top-10">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="90"
-          height="154"
-          decoding="async"
-          data-nimg="1"
-          style={{ color: "transparent" }}
-        />
-      </div>
-      <div className="absolute bottom-0 left-0">
-        <img
-          alt="ornament"
-          loading="lazy"
-          width="148"
-          height="144"
-          decoding="async"
-          data-nimg="1"
-          style={{ color: "transparent" }}
-        />
-      </div>
     </div>
   );
 };
