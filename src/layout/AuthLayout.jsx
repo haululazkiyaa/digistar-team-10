@@ -1,6 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+
+import { AuthContext } from "../context/AuthContext";
+import { useContext } from "react";
 
 const AuthLayout = () => {
+  const { isLogin } = useContext(AuthContext);
+
+  if (isLogin) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div>
       <div className="flex justify-center items-center lg:h-screen bg-gradient-to-b from-[#0193AC] to-[#3EC4DB]">

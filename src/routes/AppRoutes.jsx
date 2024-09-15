@@ -6,6 +6,8 @@ import Buyer from "../pages/buyer/Buyer";
 import Home from "../pages/Home";
 import Login from "../pages/auth/Login";
 import LoginAs from "../pages/auth/LoginAs";
+import PrivateRoute from "./PrivateRoute";
+import Product from "../pages/buyer/Product";
 import Seller from "../pages/seller/Seller";
 
 const AppRoutes = () => {
@@ -17,8 +19,11 @@ const AppRoutes = () => {
       </Route>
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/buyer" element={<Buyer />} />
-        <Route path="/seller" element={<Seller />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/buyer" element={<Buyer />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/seller" element={<Seller />} />
+        </Route>
       </Route>
     </Routes>
   );

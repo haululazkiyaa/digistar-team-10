@@ -1,5 +1,5 @@
 import ProductItem from "./ProductItem";
-import products from "../../constant/products";
+import products from "../../data/products";
 
 const ProductList = () => {
   return (
@@ -23,7 +23,6 @@ const ProductList = () => {
           >
             <img
               alt="Image section banner"
-              loading="lazy"
               decoding="async"
               data-nimg="fill"
               sizes="100vw"

@@ -80,12 +80,12 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full mb-6">
-          <button
-            type="submit"
+          <a
+            href="/buyer"
             className="w-full py-2 bg-secondary-50 text-white rounded-md"
           >
             Login
-          </button>
+          </a>
         </div>
       </form>
       <div className="w-full mb-6">

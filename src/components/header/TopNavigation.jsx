@@ -20,20 +20,13 @@ const TopNavigation = () => {
           <div className="flex items-center relative my-2">
             <img
               alt="Logo bangga buatan Indonesia"
-              loading="lazy"
               width="24"
               height="24"
               src="/svgs/logo-bbi.svg"
             />
           </div>
           <div className="flex items-center relative my-2">
-            <img
-              alt="BUMN"
-              loading="lazy"
-              width="65"
-              height="12"
-              src="/svgs/logo-bumn.svg"
-            />
+            <img alt="BUMN" width="65" height="12" src="/svgs/logo-bumn.svg" />
           </div>
         </div>
       </nav>

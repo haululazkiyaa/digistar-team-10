@@ -24,7 +24,6 @@ const ProductItem = ({ item }) => {
                   >
                     <img
                       alt={item.title}
-                      loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="w-full h-full object-cover"
@@ -51,7 +50,6 @@ const ProductItem = ({ item }) => {
                   <div className="border-[#DEE3ED] border flex gap-x-1 items-center px-1.5 py-1 rounded-xl w-fit">
                     <img
                       alt="store"
-                      loading="lazy"
                       width="16"
                       height="16"
                       decoding="async"
@@ -78,7 +76,6 @@ const ProductItem = ({ item }) => {
                       <div className="flex-none w-[15px]">
                         <img
                           alt=""
-                          loading="lazy"
                           width="12"
                           height="12"
                           decoding="async"
@@ -94,6 +91,30 @@ const ProductItem = ({ item }) => {
                         style={{ width: "140px" }}
                       >
                         {item.city}
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-start space-x-2">
+                      <div className="flex gap-1 items-center">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 576 512"
+                          className="text-tertiary-60"
+                          height="14"
+                          width="14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                        <span className="text-xs">4</span>
+                      </div>
+                      <div className="flex text-borderCard-textFieldBorder items-center !h-[14px] text-lg">
+                        •
+                      </div>
+                      <div className="text-xs text-secondary-70">
+                        <span>Terjual&nbsp;</span>
+                        <span>4</span>
                       </div>
                     </div>
                   </div>

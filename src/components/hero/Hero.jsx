@@ -25,7 +25,6 @@ const Hero = () => {
             <div className="h-[calc(100vw/2)] lg:max-h-[calc(100vh/5)] w-full cursor-pointer">
               <img
                 alt="Main Banner Homepage"
-                loading="lazy"
                 className="rounded-lg"
                 src="/images/promo-1.jpeg"
                 style={{

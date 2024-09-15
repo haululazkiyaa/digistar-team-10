@@ -1,12 +1,12 @@
-import CategoryBox from "../components/category-box/CategoryBox";
 import Hero from "../components/hero/Hero";
 import ProductList from "../components/product/ProductList";
+import Shortcut from "../components/shortcut/Shortcut";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <CategoryBox />
+      <Shortcut />
       <ProductList />
     </div>
   );

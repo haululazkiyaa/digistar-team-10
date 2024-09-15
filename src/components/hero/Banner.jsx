@@ -5,7 +5,6 @@ const Banner = ({ alt, imageSrc }) => {
     <div className="overflow-hidden relative w-full lg:h-[157px] cursor-pointer flex items-center justify-center">
       <img
         alt={alt}
-        loading="lazy"
         className="rounded-lg object-cover w-full h-full"
         src={imageSrc}
       />

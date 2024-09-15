@@ -9,7 +9,6 @@ const CategoryItem = ({ url, alt, imageSrc, label }) => {
             <div className="relative h-8 sm:h-[50px] w-8 sm:w-[50px] flex-none overflow-hidden">
               <img
                 alt={alt}
-                loading="lazy"
                 decoding="async"
                 data-nimg="fill"
                 sizes="100vw"

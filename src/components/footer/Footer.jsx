@@ -89,7 +89,6 @@ const Footer = () => {
                 >
                   <img
                     alt="Facebook icon"
-                    loading="lazy"
                     width="24"
                     height="24"
                     src="/svgs/facebook-logo.svg"
@@ -106,7 +105,6 @@ const Footer = () => {
                 >
                   <img
                     alt="X icon"
-                    loading="lazy"
                     width="24"
                     height="24"
                     src="/svgs/x-logo.svg"
@@ -123,7 +121,6 @@ const Footer = () => {
                 >
                   <img
                     alt="Instagram icon"
-                    loading="lazy"
                     width="24"
                     height="24"
                     src="/svgs/instagram-logo.svg"
@@ -140,7 +137,6 @@ const Footer = () => {
                 >
                   <img
                     alt="Youtube icon"
-                    loading="lazy"
                     width="24"
                     height="24"
                     src="/svgs/youtube-logo.svg"
@@ -182,7 +178,6 @@ const Footer = () => {
               <div className="flex items-center pr-4 text-sm">
                 <img
                   alt="Whatsapp icon"
-                  loading="lazy"
                   width="20"
                   height="20"
                   src="/svgs/whatsapp-logo.svg"
@@ -218,7 +213,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="Mandiri Virtual Account"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/mandiri-logo.svg"
@@ -229,7 +223,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="BNI Virtual Account"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/bni-logo.svg"
@@ -240,7 +233,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="Bank Syariah Indonesia Virtual Account"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/bsi-logo.svg"
@@ -251,7 +243,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="BRI Virtual Account"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/bri-logo.svg"
@@ -262,7 +253,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="BTN"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/btn-logo.svg"
@@ -273,7 +263,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="BJB Virtual Account"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/bjb-logo.svg"
@@ -284,7 +273,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="Pembayaran QR"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/qris-logo.svg"
@@ -295,7 +283,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="DANA"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/dana-logo.svg"
@@ -306,7 +293,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="Link Aja WCO"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/linkaja-logo.svg"
@@ -317,7 +303,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="OVO"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/ovo-logo.svg"
@@ -328,7 +313,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="Credit Card"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/card-logo.svg"
@@ -339,7 +323,6 @@ const Footer = () => {
             <div className="cursor-pointer flex-none w-fit items-center">
               <img
                 alt="KKI"
-                loading="lazy"
                 width="70"
                 height="70"
                 src="/svgs/kki-logo.svg"
