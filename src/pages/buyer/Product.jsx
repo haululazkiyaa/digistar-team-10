@@ -3,6 +3,7 @@ import ProductGallery from "../../components/product/ProductGallery";
 import ProductInfo from "../../components/product/ProductInfo";
 import ProductList from "../../components/product/ProductList";
 import ProductOrder from "../../components/product/ProductOrder";
+import ReviewBox from "../../components/review/ReviewBox";
 import StoreInfo from "../../components/store/StoreInfo";
 
 const Product = () => {
@@ -18,6 +19,7 @@ const Product = () => {
             <div className="flex flex-col items-start justify-start w-full">
               <StoreInfo />
               <ProductDetail />
+              <ReviewBox />
             </div>
           </div>
           <div className="w-full md:w-3/12 sticky top-auto">
