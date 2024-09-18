@@ -5,8 +5,15 @@ import ProductList from "../../components/product/ProductList";
 import ProductOrder from "../../components/product/ProductOrder";
 import ReviewBox from "../../components/review/ReviewBox";
 import StoreInfo from "../../components/store/StoreInfo";
+import { useState } from "react";
 
 const Product = () => {
+  const [openedTab, setOpenedTab] = useState("Deskripsi Produk");
+
+  const handleClickedTab = (tab) => {
+    setOpenedTab(tab);
+  };
+
   return (
     <div>
       <div className="container-layout px-0 sm:px-5">
@@ -18,8 +25,38 @@ const Product = () => {
             </div>
             <div className="flex flex-col items-start justify-start w-full">
               <StoreInfo />
-              <ProductDetail />
-              <ReviewBox />
+              <div className="mt-3 w-full px-4 md:px-0">
+                <div className="border-b border-borderCard-divider w-full px-0">
+                  <ul className="flex flex-wrap -mb-px space-x-6 font-ubuntu">
+                    <li>
+                      <div
+                        className={`inline-block pb-4 text-center cursor-pointer ${
+                          openedTab === "Deskripsi Produk"
+                            ? "text-secondary-70 rounded-t-lg border-b-4 border-secondary-70 active font-bold"
+                            : "text-paletteText-inactive border-b-2 border-transparent hover:border-gray-300' hover:text-gray-600 hover:border-gray-300"
+                        }`}
+                        onClick={() => handleClickedTab("Deskripsi Produk")}
+                      >
+                        Deskripsi Produk
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        className={`inline-block pb-4 text-center cursor-pointer ${
+                          openedTab === "Review"
+                            ? "text-secondary-70 rounded-t-lg border-b-4 border-secondary-70 active font-bold"
+                            : "text-paletteText-inactive border-b-2 border-transparent hover:border-gray-300' hover:text-gray-600 hover:border-gray-300"
+                        }`}
+                        onClick={() => handleClickedTab("Review")}
+                      >
+                        Review
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                {openedTab === "Deskripsi Produk" && <ProductDetail />}
+                {openedTab === "Review" && <ReviewBox />}
+              </div>
             </div>
           </div>
           <div className="w-full md:w-3/12 sticky top-auto">
