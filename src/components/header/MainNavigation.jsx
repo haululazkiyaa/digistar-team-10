@@ -51,8 +51,8 @@ const MainNavigation = () => {
               </span>
             </a>
           </div>
-          <nav className="hidden md:flex items-center justify-center h-full">
-            <div className="flex items-center justify-start w-[90px] lg:w-[110px]">
+          <nav className="group hidden md:flex items-center justify-center h-full">
+            <div className="menu-hover  flex items-center justify-start w-[90px] lg:w-[110px]">
               <div className="flex items-center justify-start h-full lg:mr-3">
                 <img
                   src="/svgs/category.svg"
@@ -64,7 +64,7 @@ const MainNavigation = () => {
                 </p>
               </div>
               <div
-                className="overflow-hidden hidden origin-top-right absolute bg-white ring-1 ring-black ring-opacity-5 focus:outline-none cursor-default z-50 top-[115px] left-0"
+                className="invisible overflow-hidden w-full origin-top-right absolute bg-white ring-1 ring-black ring-opacity-5 focus:outline-none cursor-default z-50 top-[115px] left-0  group-hover:visible"
                 style={{ zIndex: 1 }}
               >
                 <div role="none">
@@ -457,6 +457,314 @@ const MainNavigation = () => {
           </div>
           <div className="h-full pl-5 flex items-center justify-center"></div>
         </div>
+        <div className="h-full pl-5 flex items-center justify-center">
+          <div className="hidden md:flex pr-3">
+            <button
+              className="
+        text-[#009EA9]  border-[#009EA9] border-solid border text-[12px] flex justify-center gap-2 whitespace-nowrap items-center w-full px-4 py-2.5 rounded-lg
+      "
+            >
+              <div className="w-4 h-4">
+                <img
+                  alt="icon button"
+                  width="16"
+                  height="16"
+                  src="/svgs/ic-pending-payment.svg"
+                  style={{ color: "transparent" }}
+                />
+              </div>
+              <p className="font-medium">Menunggu Pembayaran</p>
+              <div
+                className="
+            bg-[#EE3124] text-white text-[12px] flex items-center justify-center px-1.5 rounded-full
+          "
+              >
+                26
+              </div>
+            </button>
+          </div>
+          <a href="/notification">
+            <div className="relative flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
+              <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
+                <img
+                  src="/svgs/notification.svg"
+                  alt="notification"
+                  className="w-[38px] h-[38px]"
+                />
+              </div>
+              <div className="relative h-full">
+                <div
+                  className="overflow-hidden font-ubuntu hidden right-[-20vw] md:-right-40 origin-top-right absolute mt-2 rounded-lg shadow-lg bg-white focus:outline-none cursor-default z-50 w-[70vw] overflow-y-auto bg-white md:w-[412px] !mt-[0] top-[20px] md:top-[20px]"
+                  style={{ zIndex: 1 }}
+                >
+                  <div className="py-0" role="none">
+                    <div>
+                      <div className="flex items-center px-[16px] pt-6 pb-4 border-b border-b-inherit">
+                        <span className="text-[18px] font-semibold text-[#444B55]">
+                          Notifikasi
+                        </span>
+                      </div>
+                      <div className="h-fit overflow-y-auto">
+                        <div className="">
+                          <div className="p-[16px] space-y-1 bg-[#E6F4F7] hover:bg-[#DDE1EC] cursor-pointer">
+                            <div className="flex space-x-1 items-center">
+                              <img
+                                src="/_next/static/media/money.01e6be18.svg"
+                                alt="card-send"
+                                className="w-4 h-4"
+                              />
+                              <span className="text-[12px] font-normal text-[#686E76]">
+                                15:45 WIB
+                              </span>
+                            </div>
+                            <div>
+                              <span className="text-[14px] font-bold capitalize">
+                                Pembayaran berhasil
+                              </span>
+                            </div>
+                            <div>
+                              <span className="text-[14px] font-normal text-[#444B55] break-words">
+                                Hore, pembayaranmu berhasil! Pesananmu akan
+                                segera diproses oleh penjual, cek status
+                                pesananmu disini.
+                              </span>
+                            </div>
+                          </div>
+                          <div className="p-[16px] space-y-1 bg-[#E6F4F7] hover:bg-[#DDE1EC] cursor-pointer">
+                            <div className="flex space-x-1 items-center">
+                              <img
+                                src="/_next/static/media/money.01e6be18.svg"
+                                alt="card-send"
+                                className="w-4 h-4"
+                              />
+                              <span className="text-[12px] font-normal text-[#686E76]">
+                                15:45 WIB
+                              </span>
+                            </div>
+                            <div>
+                              <span className="text-[14px] font-bold capitalize">
+                                Pesananmu menunggu pembayaran
+                              </span>
+                            </div>
+                            <div>
+                              <span className="text-[14px] font-normal text-[#444B55] break-words">
+                                Pesananmu berhasil dibuat, silahkan
+                                menyelesaikan pembayaran.
+                              </span>
+                            </div>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                      <a href="/notification">
+                        <div className="flex items-center justify-between px-[16px] py-3 border-b border-b-inherit bg-[#F6F9FC] hover:cursor-pointer">
+                          <span className="text-sm font-normal text-[#009EA9]">
+                            Lihat Semua Notifikasi
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/cart">
+            <div className="flex items-center justify-center w-full h-full">
+              <div className="relative flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
+                <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
+                  <img
+                    src="/svgs/shoping-cart.svg"
+                    alt="ShoppingCart"
+                    className="w-[38px] h-[38px]"
+                  />
+                </div>
+                <div className="absolute top-0 md:top-2 md:right-3 right-0 inline-flex items-center w-4 h-4 md:w-5 md:h-5 justify-center p-1 text-[10px] font-bold leading-none text-red-100 transform translate-x-1/2 translate-y-1/2 bg-[#EE3124] rounded-full">
+                  6
+                </div>
+                <div className="relative h-full">
+                  <div
+                    className="overflow-hidden font-ubuntu hidden right-0 md:-right-40 origin-top-right absolute mt-2 rounded-lg shadow-lg bg-white focus:outline-none cursor-default z-50 w-full lg:w-[560px] !mt-[0] top-[20px]"
+                    style={{ zIndex: 1 }}
+                  >
+                    <div className="py-0" role="none">
+                      <div className="pt-6 pb-4 px-4 flex justify-between">
+                        <div className="text-[18px] font-semibold text-[#444B55]">
+                          Keranjang
+                        </div>
+                        <a href="/cart">
+                          <div className="cursor-pointer font-semibold text-secondary-70 text-sm">
+                            Lihat Selengkapnya
+                          </div>
+                        </a>
+                      </div>
+                      <div className="border border-[#DEE3ED]"></div>
+                      <div className="flex flex-col px-4 max-h-[500px] overflow-y-auto pb-4 divide-y">
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/17092024/667b92b5771653cf3a15cf7e/66e929cd205a689c155cb565/3ba348e8fb9cb682d3240d59fa8e22.jpg"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                jasa rakit Lenovo Ideapad gaming
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp60.000.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/28032024/63eb27d5f31dd022a3c339fe/65fd200053fb0b65547cd3c6/e7976cbce120466480712fd018f533.jpg"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                Jasa Design Interior Rumah Minimalis Modern (2
+                                Tahap, pph4(2) 10%)
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp5.000.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/11992/580505/planimeter-tama.1646881824.jpeg"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                Tamaya Planix 7 Digital Planimeter Second
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp7.620.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/11992/246741/planimeter-plac.1623306555.jpeg"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                Planimeter Placom KP-90 / KP-90N
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp13.710.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/42264/506609/rawon_1.1640855650.jpeg"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                NASI SEDUH INSTAN RAWON PASPANENA (Kemasan Paper
+                                Bowl)
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp25.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="/cart">
+                          <div className="flex space-x-2 py-4 cursor-pointer">
+                            <img
+                              src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/04042023/642b8d4f9c50519615364a58/642b8f5e60826b8f84dccc20/229f657731c9db1c38b1f0fd024f64.JPG"
+                              className="flex-none w-[60px] h-[60px]  rounded"
+                            />
+                            <div className="flex flex-col justify-start w-full self-center">
+                              <div className="text-paletteText-primary cursor-pointer font-medium flex-nowrap text-ellipsis number-of-line-1">
+                                Umaiboo
+                              </div>
+                              <div className="text-[#686E76] text-sm">
+                                1 Barang
+                              </div>
+                            </div>
+                            <div className="flex flex-col space-y-1 items-end justify-end self-center">
+                              <div className="font-bold text-paletteText-primary">
+                                Rp12.000
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <span className="relative core-chat">
+            <a href="/chat">
+              <div className="flex items-center justify-center w-full h-full px-2">
+                <div className="flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
+                  <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
+                    <img
+                      src="/svgs/message.svg"
+                      alt="message"
+                      className="text-paletteText-inactive w-[38px] h-[38px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div
+              role="alert"
+              className="flex absolute z-50 justify-end top-full right-4"
+            >
+              <div
+                role="region"
+                aria-label="Notifications (F8)"
+                tabIndex="-1"
+                style={{ pointerEvents: "none" }}
+              >
+                <ol tabIndex="-1"></ol>
+              </div>
+            </div>
+          </span>
+        </div>
+
         <div className="flex items-center w-full sm:w-fit h-full">
           <div className="sm:pl-6 lg:pl-0 hidden sm:flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:mt-0 sm:space-x-5 w-full sm:w-fit">
             <a href="/login-as">
