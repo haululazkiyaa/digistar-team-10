@@ -153,6 +153,16 @@
   background-color: rgb(248 158 53 / var(--tw-bg-opacity));
 }
 
+.text-tertiary-60 {
+  --tw-text-opacity: 1;
+  color: rgb(248 158 53 / var(--tw-text-opacity));
+}
+
+.text-blackout {
+  --tw-text-opacity: 1;
+  color: rgb(148 159 163 / var(--tw-text-opacity));
+}
+
 @media (min-width: 1280px) {
   .container-layout {
     width: 1200px;

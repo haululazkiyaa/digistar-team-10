@@ -1,4 +1,48 @@
+import { useState } from "react";
+
 const ModalReview = () => {
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [hoverRating, setHoverRating] = useState(0);
+  const [selectedRating, setSelectedRating] = useState(0);
+
+  const toggleOption = (option) => {
+    setSelectedOptions((prevSelectedOptions) =>
+      prevSelectedOptions.includes(option)
+        ? prevSelectedOptions.filter((item) => item !== option)
+        : [...prevSelectedOptions, option]
+    );
+  };
+
+  const handleMouseEnter = (rating) => {
+    setHoverRating(rating);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverRating(0);
+  };
+
+  const handleRatingClick = (rating) => {
+    setSelectedRating(rating);
+  };
+
+  const options = [
+    "Response Seller",
+    "Kecepatan Pengiriman",
+    "Kualitas Produk",
+    "Kemasan Produk",
+    "Kesesuaian Produk yang dikirim",
+    "Kesesuaian Jumlah Produk yang dikirimkan",
+  ];
+
+  const rating = [
+    "Belum Ada Penilaian",
+    "Sangat Buruk",
+    "Buruk",
+    "Biasa",
+    "Bagus",
+    "Sangat Bagus",
+  ];
+
   return (
     <>
       <div className="p-5">
@@ -33,235 +77,65 @@ const ModalReview = () => {
                   className="space-x-1"
                   style={{ display: "inline-block", direction: "ltr" }}
                 >
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      display: "inline-block",
-                      position: "relative",
-                    }}
-                  >
-                    <span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-blackout"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
+                  {[1, 2, 3, 4, 5].map((rating) => (
                     <span
+                      key={rating}
+                      onClick={() => handleRatingClick(rating)}
+                      onMouseEnter={() => handleMouseEnter(rating)}
+                      onMouseLeave={handleMouseLeave}
                       style={{
+                        cursor: "pointer",
                         display: "inline-block",
-                        position: "absolute",
-                        overflow: "hidden",
-                        top: "0px",
-                        left: "0px",
-                        width: "0%",
+                        position: "relative",
                       }}
                     >
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span>
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 576 512"
+                          className={`text-2xl ${
+                            rating <= (hoverRating || selectedRating)
+                              ? "text-tertiary-60"
+                              : "text-blackout"
+                          }`}
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                      </span>
+                      <span
+                        style={{
+                          display: "inline-block",
+                          position: "absolute",
+                          overflow: "hidden",
+                          top: "0px",
+                          left: "0px",
+                          width: `0%`,
+                        }}
                       >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 576 512"
+                          className="text-2xl text-tertiary-60"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                      </span>
                     </span>
-                  </span>
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      display: "inline-block",
-                      position: "relative",
-                    }}
-                  >
-                    <span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-blackout"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        position: "absolute",
-                        overflow: "hidden",
-                        top: "0px",
-                        left: "0px",
-                        width: "0%",
-                      }}
-                    >
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                  </span>
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      display: "inline-block",
-                      position: "relative",
-                    }}
-                  >
-                    <span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-blackout"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        position: "absolute",
-                        overflow: "hidden",
-                        top: "0px",
-                        left: "0px",
-                        width: "0%",
-                      }}
-                    >
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                  </span>
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      display: "inline-block",
-                      position: "relative",
-                    }}
-                  >
-                    <span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-blackout"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        position: "absolute",
-                        overflow: "hidden",
-                        top: "0px",
-                        left: "0px",
-                        width: "0%",
-                      }}
-                    >
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                  </span>
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      display: "inline-block",
-                      position: "relative",
-                    }}
-                  >
-                    <span>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-blackout"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        position: "absolute",
-                        overflow: "hidden",
-                        top: "0px",
-                        left: "0px",
-                        width: "0%",
-                      }}
-                    >
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-2xl text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </span>
-                  </span>
+                  ))}
                 </span>
               </div>
               <div className="text-paletteText-primary font-semibold">
-                Belum Ada Penilaian
+                {rating[selectedRating]}
               </div>
             </div>
             <div className="py-4 flex flex-col items-center justify-center space-y-4">
@@ -269,36 +143,19 @@ const ModalReview = () => {
                 Apa yang Anda sukai?
               </div>
               <div className="flex flex-wrap items-center justify-center px-10">
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Response Seller
+                {options.map((option) => (
+                  <div
+                    key={option}
+                    onClick={() => toggleOption(option)}
+                    className={`border cursor-pointer p-2 m-1 rounded-md text-xs ${
+                      selectedOptions.includes(option)
+                        ? "bg-categoryBg-milkyWay text-secondary-70 border-secondary-70 "
+                        : "bg-borderCard-card text-paletteText-primary"
+                    }`}
+                  >
+                    {option}
                   </div>
-                </div>
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Kecepatan Pengiriman
-                  </div>
-                </div>
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Kualitas Produk
-                  </div>
-                </div>
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Kemasan Produk
-                  </div>
-                </div>
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Kesesuaian Produk yang dikirim
-                  </div>
-                </div>
-                <div>
-                  <div className="border cursor-pointer p-2 m-1 rounded-md text-xs bg-borderCard-card border-borderCard-divider text-paletteText-primary">
-                    Kesesuaian Jumlah Produk yang dikirimkan
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <div className="pt-4 space-y-4">

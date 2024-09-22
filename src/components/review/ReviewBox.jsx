@@ -4,6 +4,54 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
 const ReviewBox = () => {
   const value = 5;
+
+  const comments = [
+    {
+      id: 1,
+      name: "HARTONO",
+      date: "26 Juli 2022",
+      rating: 5,
+      text: "Great product!",
+      reply: {
+        name: "Admin",
+        date: "26 Juli 2022",
+        text: "Thank you for your review, We are glad you like our product!",
+      },
+    },
+    {
+      id: 2,
+      name: "SITI",
+      date: "25 Juli 2022",
+      rating: 4,
+      text: "Good quality, but could be better.",
+      reply: null,
+    },
+    {
+      id: 3,
+      name: "ANDI",
+      date: "24 Juli 2022",
+      rating: 3,
+      text: "Average experience.",
+      reply: null,
+    },
+    {
+      id: 4,
+      name: "BUDI",
+      date: "23 Juli 2022",
+      rating: 2,
+      text: "Not satisfied with the product.",
+      reply: null,
+    },
+    {
+      id: 5,
+      name: "RINA",
+      date: "22 Juli 2022",
+      rating: 1,
+      text: "Very bad experience.",
+      reply: null,
+    },
+  ];
+
   return (
     <div className="py-4">
       <div className="space-y-1">
@@ -523,451 +571,67 @@ const ReviewBox = () => {
           </div>
         </div>
         <div className="divide-y">
-          <div className="py-6">
-            <div className="w-full flex flex-col space-y-3">
-              <div className="flex space-x-1">
-                <div className="flex flex-nowrap items-center">
-                  <ul className="flex items-center gap-x-1 text-center">
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                  </ul>
+          {comments.map((comment) => (
+            <div key={comment.id} className="py-6">
+              <div className="w-full flex flex-col space-y-3">
+                <div className="flex space-x-1">
+                  <div className="flex flex-nowrap items-center">
+                    <ul className="flex items-center gap-x-1 text-center">
+                      {Array.from({ length: comment.rating }, (_, index) => (
+                        <li key={index}>
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth="0"
+                            viewBox="0 0 576 512"
+                            className="text-tertiary-60"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                          </svg>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-secondary-70 font-bold text-base">
+                    {comment.rating}
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="text-sm text-paletteText-primary font-semmibold">
-                  HARTONO
+                <div className="flex items-center space-x-1">
+                  <div className="text-sm text-paletteText-primary font-semmibold">
+                    {comment.name}
+                  </div>
+                  <div className="text-borderCard-textFieldBorder">•</div>
+                  <div className="text-sm text-paletteText-inactive">
+                    {comment.date}
+                  </div>
                 </div>
-                <div className="text-borderCard-textFieldBorder">•</div>
-                <div className="text-sm text-paletteText-inactive">
-                  26 Juli 2022
+                <div>
+                  <div className="text-paletteText-primary text-sm">
+                    {comment.text}
+                  </div>
                 </div>
+                {comment.reply && (
+                  <div className="bg-gray-100 p-4 rounded-lg mt-4">
+                    <div className="flex items-center space-x-1">
+                      <div className="text-sm text-paletteText-primary font-semibold">
+                        {comment.reply.name}
+                      </div>
+                      <div className="text-borderCard-textFieldBorder">•</div>
+                      <div className="text-sm text-paletteText-inactive">
+                        {comment.reply.date}
+                      </div>
+                    </div>
+                    <div className="text-paletteText-primary text-sm mt-2">
+                      {comment.reply.text}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-          <div className="py-6">
-            <div className="w-full flex flex-col space-y-3">
-              <div className="flex space-x-1">
-                <div className="flex flex-nowrap items-center">
-                  <ul className="flex items-center gap-x-1 text-center">
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="text-sm text-paletteText-primary font-semmibold">
-                  HARTONO
-                </div>
-                <div className="text-borderCard-textFieldBorder">•</div>
-                <div className="text-sm text-paletteText-inactive">
-                  26 Juli 2022
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="py-6">
-            <div className="w-full flex flex-col space-y-3">
-              <div className="flex space-x-1">
-                <div className="flex flex-nowrap items-center">
-                  <ul className="flex items-center gap-x-1 text-center">
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="text-sm text-paletteText-primary font-semmibold">
-                  HARTONO
-                </div>
-                <div className="text-borderCard-textFieldBorder">•</div>
-                <div className="text-sm text-paletteText-inactive">
-                  10 Juni 2022
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="py-6">
-            <div className="w-full flex flex-col space-y-3">
-              <div className="flex space-x-1">
-                <div className="flex flex-nowrap items-center">
-                  <ul className="flex items-center gap-x-1 text-center">
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="text-sm text-paletteText-primary font-semmibold">
-                  HARTONO
-                </div>
-                <div className="text-borderCard-textFieldBorder">•</div>
-                <div className="text-sm text-paletteText-inactive">
-                  08 Juni 2022
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="py-6">
-            <div className="w-full flex flex-col space-y-3">
-              <div className="flex space-x-1">
-                <div className="flex flex-nowrap items-center">
-                  <ul className="flex items-center gap-x-1 text-center">
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        viewBox="0 0 576 512"
-                        className="text-tertiary-60"
-                        height="1em"
-                        width="1em"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-                      </svg>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="text-sm text-paletteText-primary font-semmibold">
-                  HARTONO
-                </div>
-                <div className="text-borderCard-textFieldBorder">•</div>
-                <div className="text-sm text-paletteText-inactive">
-                  08 Juni 2022
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="flex justify-center">
           <div className="w-fit border rounded-lg overflow-hidden divide-x flex justify-between md:hidden font-ubuntu">
