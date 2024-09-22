@@ -3,7 +3,7 @@ const BreadCrumb = () => {
     <div className="w-full flex items-center justify-between py-2 pl-6 border-b">
       <div className="flex items-center justify-start space-x-2">
         <span className="text-paletteText-inactive font-[400]">
-          <a href="/">
+          <a href="#">
             <span className="whitespace-nowrap text-sm font-ubuntu">
               Beranda
             </span>
@@ -24,7 +24,7 @@ const BreadCrumb = () => {
           </svg>
         </span>
         <span className="text-paletteText-inactive font-[400]">
-          <a href="/transaction">
+          <a href="#">
             <span className="whitespace-nowrap text-sm font-ubuntu">
               Transaksi
             </span>
@@ -45,7 +45,7 @@ const BreadCrumb = () => {
           </svg>
         </span>
         <span className="text-paletteText-primary font-[500]">
-          <a href="/transaction/review">
+          <a href="#">
             <span className="whitespace-nowrap text-sm font-ubuntu">
               Ulasan
             </span>

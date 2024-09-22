@@ -14,7 +14,7 @@ const LoginAs = () => {
         </div>
       </div>
       <div className="flex flex-col w-full">
-        <a href="/login">
+        <a href="/login?role=seller">
           <div className="flex flex-col items-center sm:flex-row space-y-4 sm:space-y-0 w-full text-paletteText-primary  bg-white border rounded-3xl py-7 px-5 sm:space-x-5 cursor-pointer hover:bg-gradient-to-b from-[#0193AC] to-[#3EC4DB] hover:text-white mb-4">
             <div className="flex justify-between items-center gap-6 w-full">
               <div className="flex gap-2">

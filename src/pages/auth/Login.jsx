@@ -1,4 +1,31 @@
+import { useContext, useEffect, useState } from "react";
+
+import { AuthContext } from "../../context/AuthContext";
+
 const Login = () => {
+  const { handleLogin } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const role = urlParams.get("role");
+    if (role) {
+      setRole(role);
+    }
+  }, []);
+
+  const login = () => {
+    const data = {
+      email,
+      password,
+      role,
+    };
+
+    handleLogin(data);
+  };
+
   return (
     <div className="flex flex-col md:justify-center lg:justify-center items-center w-full rounded-lg bg-white h-screen lg:h-full py-20 px-10 md:p-10 lg:p-10 xl:p-10">
       <div className="w-full">
@@ -22,7 +49,7 @@ const Login = () => {
         </div>
         <div className="flex justify-between items-center">
           <div className="text-2xl text-paletteText-primary font-bold">
-            Login Pembeli
+            Login {role === "user" ? "Sebagai Pembeli" : "Sebagai Penjual"}
           </div>
           <a href="/">
             <div className="relative w-24 h-24 cursor-pointer">
@@ -40,10 +67,10 @@ const Login = () => {
             className="appearance-none border rounded w-full py-2 px-3 focus:outline-none false"
             id="username"
             type="text"
-            placeholder="padi@email.com"
-            value="tictac@yopmail.com"
+            placeholder="Masukan email"
+            value={email}
             data-gtm-form-interact-field-id="2"
-            onChange={() => {}}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="w-full space-y-2 mb-6">
@@ -55,10 +82,10 @@ const Login = () => {
               className="appearance-none border rounded w-full py-2 px-3 focus:outline-none false"
               id="password"
               type="password"
-              placeholder="Masukan Kata Sandi"
-              value="Cupacups123"
+              placeholder="Masukan password"
+              value={password}
               data-gtm-form-interact-field-id="3"
-              onChange={() => {}}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <span className="absolute top-1/2 right-1 transform -translate-x-1/2 -translate-y-1/2">
               <svg
@@ -80,18 +107,19 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full mb-6">
-          <a
-            href="/buyer"
+          <button
+            type="button"
             className="w-full py-2 bg-secondary-50 text-white rounded-md"
+            onClick={() => login()}
           >
             Login
-          </a>
+          </button>
         </div>
       </form>
       <div className="w-full mb-6">
         <p className="text-center text-sm text-paletteText-primary">
           Lupa Kata Sandi?{" "}
-          <a href="/forgot-password">
+          <a href="#">
             <span className="text-secondary-70 font-medium text-sm cursor-pointer">
               Atur Ulang Kata Sandi
             </span>
@@ -108,7 +136,7 @@ const Login = () => {
       <div className="w-full">
         <p className="text-center text-sm text-paletteText-primary">
           Belum punya akun?{" "}
-          <a href="/register-as">
+          <a href="#">
             <span className="text-secondary-70 font-medium text-sm cursor-pointer">
               Daftar Sekarang
             </span>

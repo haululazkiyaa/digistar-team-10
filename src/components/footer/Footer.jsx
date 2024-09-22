@@ -11,17 +11,17 @@ const Footer = () => {
               <div className="cursor-pointer hover:text-secondary-70 text-sm">
                 Tentang PaDi UMKM
               </div>
-              <a href="/syarat-dan-ketentuan">
+              <a href="#">
                 <div className="cursor-pointer hover:text-secondary-70 text-sm">
                   Syarat &amp; Ketentuan
                 </div>
               </a>
-              <a href="/kebijakan-privasi">
+              <a href="#">
                 <div className="cursor-pointer hover:text-secondary-70 text-sm">
                   Kebijakan Privasi
                 </div>
               </a>
-              <a href="/landing-page/landing-finance">
+              <a href="#">
                 <div className="cursor-pointer hover:text-secondary-70 text-sm">
                   Finance
                 </div>

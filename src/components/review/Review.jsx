@@ -1,7 +1,12 @@
+import ModalLayout from "../../layout/ModalLayout";
+import ModalReview from "../modal/ModalReview";
 import ReviewItem from "./ReviewItem";
 import needReview from "../../data/need-review";
+import useModal from "../../hooks/useModal";
 
 const Review = () => {
+  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+
   return (
     <div className=" px-4  lg:px-8  py-10 flex w-full">
       <div className="col-span-12 w-full">
@@ -163,6 +168,7 @@ const Review = () => {
                     <ReviewItem
                       key={item.product_title + item.id}
                       item={item}
+                      handleReview={() => handleOpenModal()}
                     />
                   ))}
                 </div>
@@ -235,6 +241,10 @@ const Review = () => {
           </div>
         </div>
       </div>
+
+      <ModalLayout isOpen={isOpen} closeBtnAction={() => handleCloseModal()}>
+        <ModalReview />
+      </ModalLayout>
     </div>
   );
 };

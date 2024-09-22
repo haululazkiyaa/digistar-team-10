@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="text-right mt-2">
-          <a href="/promo">
+          <a href="#">
             <span className="text-sm lg:text-md font-bold text-secondary-70 text-right cursor-pointer">
               Lihat semua promo
             </span>

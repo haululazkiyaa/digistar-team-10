@@ -2,7 +2,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 
 const MainNavigation = () => {
-  const { isLogin } = useContext(AuthContext);
+  const { isLogin, handleLogout } = useContext(AuthContext);
   return (
     <div className="w-full z-40 flex-col flex bg-white border-b-2">
       <div className="w-full flex md:hidden items-start justify-start transition duration-500 ease-in-out -translate-x-full bg-white flex-col absolute inset-0 md:py-0 z-[1000] h-screen">
@@ -13,12 +13,12 @@ const MainNavigation = () => {
         </div>
         <div className="flex justify-between flex-col p-4 w-full h-full">
           <div>
-            <a href="/login">
+            <a href="/login-as">
               <button className="py-2 px-4 rounded-lg border-2 border-[#0092ac] text-[#0092ac] text-lg font-semibold mb-4 w-full">
                 Masuk
               </button>
             </a>
-            <a href="/register-as">
+            <a href="#">
               <button className="py-2 px-4 rounded-lg border-2 border-[#0092ac] text-white bg-[#0092ac] text-lg font-semibold mb-4 w-full">
                 Daftar
               </button>
@@ -45,7 +45,7 @@ const MainNavigation = () => {
             </svg> */}
           </div>
           <div className="flex-none items-center justify-center h-full w-[100px] max-w-[100px] md:w-[120px] md:max-w-[120px] pr-7">
-            <a href="/">
+            <a href="#">
               <span className="flex items-center justify-center cursor-pointer w-full h-full">
                 <img
                   src="/svgs/logo.svg"
@@ -79,7 +79,7 @@ const MainNavigation = () => {
                           Kategori Produk &amp; Jasa
                         </div>
                         <div>
-                          <a href="/c">
+                          <a href="#">
                             <span className="block text-xs text-cyan-600 m-[2px]">
                               Lihat Semua
                             </span>
@@ -88,336 +88,336 @@ const MainNavigation = () => {
                       </div>
                       <div className="max-h-[420px] py-3 overflow-y-scroll">
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/bahan-kimia">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Bahan Kimia
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/buku">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Buku
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/dapur">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Dapur
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/elektronik">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Elektronik
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/fashion">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Fashion
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/fashion-anak-and-bayi">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Fashion Anak &amp; Bayi
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/fashion-muslim">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Fashion Muslim
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/fashion-pria">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Fashion Pria
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/fashion-wanita">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Fashion Wanita
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/film-and-musik">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Film &amp; Musik
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/gaming">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Gaming
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/handphone-and-tablet">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Handphone &amp; Tablet
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/ibu-and-bayi">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Ibu &amp; Bayi
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-advertising">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Advertising
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-ekspedisi-and-pengepakan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Ekspedisi &amp; Pengepakan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-event-organizer">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Event Organizer
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-konstruksi-and-renovasi">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Konstruksi &amp; Renovasi
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-mandor-and-tenaga-kerja-lainnya">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Mandor &amp; Tenaga Kerja Lainnya
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-perawatan-elektronik-and-it">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Perawatan Elektronik &amp; IT
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-perawatan-kendaraan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Perawatan Kendaraan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-percetakan-and-media">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Percetakan &amp; Media
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/jasa-travel-and-akomodasi">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Jasa Travel &amp; Akomodasi
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/kamera">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Kamera
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/kecantikan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Kecantikan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/kesehatan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Kesehatan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/komputer-and-laptop">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Komputer &amp; Laptop
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/konveksi-and-laundry">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Konveksi &amp; Laundry
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/mainan-and-hobi">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Mainan &amp; Hobi
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/makanan-and-minuman">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Makanan &amp; Minuman
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/office-and-stationery">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Office &amp; Stationery
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/olahraga">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Olahraga
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/otomotif">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Otomotif
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/pendidikan-dan-pelatihan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Pendidikan dan Pelatihan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/pengadaan-kendaraan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Pengadaan Kendaraan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/pengadaan-peralatan-mesin">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Pengadaan Peralatan-Mesin
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/perawatan-hewan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Perawatan Hewan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/perawatan-tubuh">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Perawatan Tubuh
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/perlengkapan-pesta-and-craft">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Perlengkapan Pesta &amp; Craft
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/pertanian-and-peternakan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Pertanian &amp; Peternakan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/pertukangan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Pertukangan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/properti">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Properti
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/rumah-tangga">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Rumah Tangga
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/sewa-gedung">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Sewa Gedung
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/sewa-kendaraan">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Sewa Kendaraan
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/sewa-peralatan-mesin">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Sewa Peralatan-Mesin
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/souvenir-and-merchandise">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Souvenir &amp; Merchandise
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/tour-and-travel">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Tour &amp; Travel
                             </span>
                           </a>
                         </div>
                         <div className="font-medium text-[#444B55] hover:bg-[#E6F4F7] mx-3 cursor-pointer rounded-lg whitespace-nowrap">
-                          <a href="/c/wedding">
+                          <a href="#">
                             <span className=" whitespace-nowrap truncate rounded-lg block p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                               Wedding
                             </span>
@@ -432,7 +432,7 @@ const MainNavigation = () => {
                       <div className="h-[420px] px-[20px] pb-[20px] overflow-y-auto">
                         <div className="flex flex-wrap justify-start gap-y-0">
                           <div className="w-1/2 lg:w-1/4">
-                            <a href="/c/fashion/seragam-kerja">
+                            <a href="#">
                               <span className="py-2 block font-[400] whitespace-nowrap truncate cursor-pointer rounded-lg p-2 text-sm hover:bg-[#E6F4F7] hover:text-[#009EA9] text-gray-600">
                                 Seragam Kerja
                               </span>
@@ -489,7 +489,7 @@ const MainNavigation = () => {
                   </div>
                 </button>
               </div>
-              <a href="/notification">
+              <a href="#">
                 <div className="relative flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
                   <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
                     <img
@@ -562,7 +562,7 @@ const MainNavigation = () => {
                               <div></div>
                             </div>
                           </div>
-                          <a href="/notification">
+                          <a href="#">
                             <div className="flex items-center justify-between px-[16px] py-3 border-b border-b-inherit bg-[#F6F9FC] hover:cursor-pointer">
                               <span className="text-sm font-normal text-[#009EA9]">
                                 Lihat Semua Notifikasi
@@ -575,7 +575,7 @@ const MainNavigation = () => {
                   </div>
                 </div>
               </a>
-              <a href="/cart">
+              <a href="#">
                 <div className="flex items-center justify-center w-full h-full">
                   <div className="relative flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
                     <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
@@ -598,7 +598,7 @@ const MainNavigation = () => {
                             <div className="text-[18px] font-semibold text-[#444B55]">
                               Keranjang
                             </div>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="cursor-pointer font-semibold text-secondary-70 text-sm">
                                 Lihat Selengkapnya
                               </div>
@@ -606,7 +606,7 @@ const MainNavigation = () => {
                           </div>
                           <div className="border border-[#DEE3ED]"></div>
                           <div className="flex flex-col px-4 max-h-[500px] overflow-y-auto pb-4 divide-y">
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/17092024/667b92b5771653cf3a15cf7e/66e929cd205a689c155cb565/3ba348e8fb9cb682d3240d59fa8e22.jpg"
@@ -627,7 +627,7 @@ const MainNavigation = () => {
                                 </div>
                               </div>
                             </a>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/28032024/63eb27d5f31dd022a3c339fe/65fd200053fb0b65547cd3c6/e7976cbce120466480712fd018f533.jpg"
@@ -649,7 +649,7 @@ const MainNavigation = () => {
                                 </div>
                               </div>
                             </a>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/11992/580505/planimeter-tama.1646881824.jpeg"
@@ -670,7 +670,7 @@ const MainNavigation = () => {
                                 </div>
                               </div>
                             </a>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/11992/246741/planimeter-plac.1623306555.jpeg"
@@ -691,7 +691,7 @@ const MainNavigation = () => {
                                 </div>
                               </div>
                             </a>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/products/42264/506609/rawon_1.1640855650.jpeg"
@@ -713,7 +713,7 @@ const MainNavigation = () => {
                                 </div>
                               </div>
                             </a>
-                            <a href="/cart">
+                            <a href="#">
                               <div className="flex space-x-2 py-4 cursor-pointer">
                                 <img
                                   src="https://smb-padiumkm-images-public-stage.oss-ap-southeast-5.aliyuncs.com/product/image/04042023/642b8d4f9c50519615364a58/642b8f5e60826b8f84dccc20/229f657731c9db1c38b1f0fd024f64.JPG"
@@ -742,7 +742,7 @@ const MainNavigation = () => {
                 </div>
               </a>
               <span className="relative core-chat">
-                <a href="/chat">
+                <a href="#">
                   <div className="flex items-center justify-center w-full h-full px-2">
                     <div className="flex items-center justify-center cursor-pointer h-full w-full text-paletteText-inactive min-w-[60px]">
                       <div className="flex items-center justify-center hover:bg-[#F3F5FC] hover:rounded-md py-[5px] px-[6px] w-[40px] h-[40px]">
@@ -770,7 +770,7 @@ const MainNavigation = () => {
                 </div>
               </span>
             </div>
-            <div className="flex items-center w-full sm:w-fit h-full">
+            <div className="group flex items-center w-full sm:w-fit h-full">
               <div className="items-center justify-center pl-4 hidden sm:flex space-x-5 h-full">
                 <div className="h-full relative text-left cursor-pointer">
                   <div className="flex items-center justify-center h-full space-x-3">
@@ -802,7 +802,7 @@ const MainNavigation = () => {
                     </div>
                   </div>
                   <div
-                    className="overflow-hidden font-ubuntu hidden right-0 origin-top-right absolute mt-2 rounded-lg shadow-lg bg-white focus:outline-none cursor-default z-50 w-[396px] !mt-[0] top-[60px] pt-4"
+                    className="invisible overflow-hidden font-ubuntu right-0 origin-top-right absolute mt-2 rounded-lg shadow-lg bg-white focus:outline-none cursor-default z-50 w-[396px] !mt-[0] top-[60px] pt-4 group-hover:visible"
                     style={{ zIndex: 1 }}
                   >
                     <div className="py-0" role="none">
@@ -855,7 +855,7 @@ const MainNavigation = () => {
                                 height="36"
                                 decoding="async"
                                 data-nimg="1"
-                                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwallet.48eac4b6.svg&amp;w=96&amp;q=75"
+                                src="/svgs/ic-wallet.svg"
                                 style={{ color: "transparent" }}
                               />
                               <div className="flex flex-col">
@@ -919,7 +919,7 @@ const MainNavigation = () => {
                             height="24"
                             decoding="async"
                             data-nimg="1"
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcredit-card.302fcbef.svg&amp;w=48&amp;q=75"
+                            src="/svgs/ic-payment.svg"
                             style={{ color: "transparent" }}
                           />
                           <div>Pembayaran</div>
@@ -939,7 +939,7 @@ const MainNavigation = () => {
                             height="24"
                             decoding="async"
                             data-nimg="1"
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftransaction.29de8020.svg&amp;w=48&amp;q=75"
+                            src="/svgs/ic-transaction.svg"
                             style={{ color: "transparent" }}
                           />
                           <div>Daftar Transaksi</div>
@@ -959,7 +959,7 @@ const MainNavigation = () => {
                             height="24"
                             decoding="async"
                             data-nimg="1"
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmap.9caaf192.svg&amp;w=48&amp;q=75"
+                            src="/svgs/ic-maps.svg"
                             style={{ color: "transparent" }}
                           />
                           <div>Alamat Pengiriman</div>
@@ -969,11 +969,12 @@ const MainNavigation = () => {
                         <div></div>
                         <div></div>
                       </div>
-                      <div
+                      <button
                         className="text-gray-700 font-ubuntu block px-4 py-2 text-sm hover:bg-inactive cursor-pointer "
                         href="#"
                         role="menuitem"
                         id="menu-item-0"
+                        onClick={() => handleLogout()}
                       >
                         <div className="flex items-center space-x-4">
                           <img
@@ -983,12 +984,12 @@ const MainNavigation = () => {
                             height="24"
                             decoding="async"
                             data-nimg="1"
-                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flog-out.5649f1b6.svg&amp;w=48&amp;q=75"
+                            src="/svgs/ic-log-out.svg"
                             style={{ color: "transparent" }}
                           />
                           <div>Keluar</div>
                         </div>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1004,7 +1005,7 @@ const MainNavigation = () => {
                   Masuk
                 </button>
               </a>
-              <a href="/register-as">
+              <a href="#">
                 <button className="px-6 w-full sm:w-fit h-10 primary-button-blue">
                   Daftar
                 </button>

@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 import ProductDetail from "../../components/product/ProductDetail";
 import ProductGallery from "../../components/product/ProductGallery";
 import ProductInfo from "../../components/product/ProductInfo";
@@ -5,7 +7,6 @@ import ProductList from "../../components/product/ProductList";
 import ProductOrder from "../../components/product/ProductOrder";
 import ReviewBox from "../../components/review/ReviewBox";
 import StoreInfo from "../../components/store/StoreInfo";
-import { useState } from "react";
 
 const Product = () => {
   const [openedTab, setOpenedTab] = useState("Deskripsi Produk");
@@ -13,6 +14,27 @@ const Product = () => {
   const handleClickedTab = (tab) => {
     setOpenedTab(tab);
   };
+
+  useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get("tab");
+    if (tab) {
+      setOpenedTab(tab);
+    }
+  }, []);
+
+  const tabRef = useRef(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get("tab");
+    if (tab) {
+      tabRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []);
 
   return (
     <div>
@@ -23,7 +45,10 @@ const Product = () => {
               <ProductGallery />
               <ProductInfo />
             </div>
-            <div className="flex flex-col items-start justify-start w-full">
+            <div
+              ref={tabRef}
+              className="flex flex-col items-start justify-start w-full"
+            >
               <StoreInfo />
               <div className="mt-3 w-full px-4 md:px-0">
                 <div className="border-b border-borderCard-divider w-full px-0">

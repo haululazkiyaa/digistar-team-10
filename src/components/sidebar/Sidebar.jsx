@@ -9,7 +9,7 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="text-paletteText-primary space-y-2 text-xs whitespace-wrap font-[400] ">
-            <a href="/dashboard/profile">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -50,7 +50,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-            <a href="/dashboard/address">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -103,7 +103,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-            <a href="/dashboard/account-number">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -157,7 +157,7 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="text-paletteText-primary space-y-2 text-xs whitespace-wrap font-[400] ">
-            <a href="/transaction/payment">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -198,7 +198,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-            <a href="/transaction">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -245,7 +245,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-            <a href="/transaction/reorder" className="reorder-walkthrough">
+            <a href="#" className="reorder-walkthrough">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
@@ -282,7 +282,7 @@ const Sidebar = () => {
                 </div>
               </div>
             </a>
-            <a href="/transaction/review">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1  bg-secondary-60 rounded-r-lg"></span>
@@ -330,7 +330,7 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="text-paletteText-primary space-y-2 text-xs whitespace-wrap font-[400] ">
-            <a href="/chat">
+            <a href="#">
               <div className="flex justify-between items-center cursor-pointer">
                 <div className="flex gap-2">
                   <span className="w-1 false"></span>
